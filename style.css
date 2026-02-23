@@ -1,0 +1,97 @@
+/* Imports Font to use */
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Metal Mania', system-ui;
+    color: #ffffff;
+
+    background-image: linear-gradient(rgba(20, 0, 0, 0.7), rgba(0, 0, 0, 0.85)), 
+                      url('assets/background.jpg');
+                      background-size: cover;
+                      background-attachment: fixed;
+                      background-color: #1a0000;
+
+}
+    
+
+h1 {
+    font-family: 'Metal Mania', system-ui;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    color: #ff3300;
+
+    /* Double shadow for a "glowing ember" effect */
+    text-shadow: 2px 2px 0px #000, 0 0 20px #ff3300;
+    letter-spacing: 2px;
+}
+
+
+p {
+    font-family: 'Metal Mania', system-ui;
+    font-size: 1.5rem;
+    color: #ff9966;
+    margin-bottom: 2rem;
+}
+
+.camera-container {
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+    border: 4px solid #8b0000; /* Dark blood red border */
+    border-radius: 10px; /* Sharper corners feel more "Metal" */
+    overflow: hidden;
+    box-shadow: 0 0 40px rgba(139, 0, 0, 0.7);
+    background: #000;
+}
+
+
+video {
+    width: 100%;
+    display: block;
+    transform: scaleX(-1); /* Flips it to feel more natural */
+}
+
+canvas { display: none; }
+
+
+#roast-button {
+    margin-top: 2rem;
+    padding: 15px 50px;
+    font-family: 'Metal Mania', system-ui;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    border: 2px solid #ff3300;
+    background: #000; /* Black button with glow looks more metal */
+    transition: all 0.4s ease;
+    text-transform: uppercase;
+}
+
+#roast-button:hover {
+    background: #ff3300;
+    color: #000;
+    box-shadow: 0 0 30px #ff3300;
+}
+
+#roast-answer {
+    margin-top: 2rem;
+    padding: 25px;
+    max-width: 600px;
+    width: 85%;
+    background: rgba(0, 0, 0, 0.9);
+    border: 2px solid #8b0000;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: #ffccaa;
+    text-align: center;
+    display: none;
+}
+                      
