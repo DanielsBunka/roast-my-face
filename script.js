@@ -51,7 +51,7 @@ roastButton.addEventListener('click', async () => {
     try{
 
         // Middleman for AI API - uses Cloudflare - sends the image over
-        const proxyUrl = 'faceroastproxy.daniels-bunka8.workers.dev';
+        const proxyUrl = 'https://faceroastproxy.daniels-bunka8.workers.dev';
 
         const response = await fetch(proxyUrl, {
             method: "POST",
