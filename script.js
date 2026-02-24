@@ -11,8 +11,8 @@ navigator.mediaDevices.getUserMedia({ video: true })
     })
     .catch((err) => {
         console.error("USER DENIED CAMERA ACCESS - are they scared?", err);
-        resultDiv.style.display = 'block';
-        resultDiv.innerText = "ERROR: CAMERA PERMISSION DENIED. ARE YOU SCARED??????";
+        roastAnswer.style.display = 'block';
+        roastAnswer.innerText = "ERROR: CAMERA PERMISSION DENIED. ARE YOU SCARED??????";
     });
 
 /** Text to Speech */
@@ -59,7 +59,26 @@ roastButton.addEventListener('click', async () => {
             body: JSON.stringify({ imageBase64: base64Image })
         });
 
-        
+        if (!response.ok) {
+            throw new Error("Roast not avaliable, you survived this time [Proxy Error]")
+        }
+
+        const data = await response.json();
+        const roastText = data.roast;
+
+        roastAnswer.innerText = roastText;
+        speakRoast(roastText);
+
+        } catch (error) {
+        // If anything breaks (no internet, wrong URL, etc.)
+        console.error("Ritual Failed:", error);
+        roastAnswer.innerText = "Roast not avaliable, you survived this time  (Check your Proxy URL/Internet!)";
+        } finally {
+        // 5. THE RESET: Allow them to be roasted again
+        roastButton.disabled = false;
+        roastButton.innerText = "ROAST ME AGAIN";
+
+
 
     }
-}
+});
