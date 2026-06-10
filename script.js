@@ -74,7 +74,7 @@ roastButton.addEventListener('click', async () => {
         console.error("Ritual Failed:", error);
         roastAnswer.innerText = "Roast not avaliable, you survived this time  (Check your Proxy URL/Internet!)";
         } finally {
-        // 5. THE RESET: Allow them to be roasted again
+        // Resets button and allows for another roast
         roastButton.disabled = false;
         roastButton.innerText = "ROAST ME AGAIN";
 
