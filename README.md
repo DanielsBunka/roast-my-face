@@ -13,6 +13,7 @@ https://danielsbunka.github.io/roast-my-face/
 * **Text to Speech:** The roasts are read out **DIRECTLY TO YOUR FACE**
 
 ## Tech Stack
-* **Frontend:** Basic HTML, CSS and Javascript
-* **Backend:** Cloudflare Workers (Serverless)
-* **AI Integration:** Latest Gemini Flash Model (currently Gemini Flash 3.5) - Routing the request through Openrouter
+- **Frontend:** HTML, CSS, JavaScript
+- **Browser APIs:** MediaDevices, Canvas, Web Speech
+- **Backend & AI:** Cloudflare Workers, OpenRouter API, Gemini
+- **Hosting:** GitHub Pages
